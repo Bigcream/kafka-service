@@ -1,8 +1,8 @@
-package com.example.demokafka.controller;
+package com.example.kafkaservice.controller;
 
-import com.example.demokafka.kafka.JsonKafkaProducer;
-import com.example.demokafka.kafka.KafkaProducer;
-import com.example.demokafka.payload.User;
+import com.example.kafkaservice.kafka.JsonKafkaProducer;
+import com.example.kafkaservice.kafka.KafkaProducer;
+import com.example.kafkaservice.payload.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

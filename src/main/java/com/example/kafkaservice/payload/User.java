@@ -1,4 +1,4 @@
-package com.example.demokafka.payload;
+package com.example.kafkaservice.payload;
 
 public class User {
     private int id;
