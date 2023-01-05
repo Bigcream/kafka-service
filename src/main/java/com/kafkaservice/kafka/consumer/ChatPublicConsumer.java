@@ -1,9 +1,8 @@
 package com.kafkaservice.kafka.consumer;
 
-
-import com.example.appchat.constant.KafkaGroup;
-import com.example.appchat.constant.KafkaTopic;
 import com.example.appchat.service.UserChatService;
+import com.kafkaservice.constant.KafkaGroup;
+import com.kafkaservice.constant.KafkaTopic;
 import com.kafkaservice.payload.MessageKafka;
 import lombok.RequiredArgsConstructor;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
