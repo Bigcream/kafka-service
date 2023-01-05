@@ -61,9 +61,9 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.example</groupId>
-			<artifactId>app-chat</artifactId>
-			<version>0.0.1-20230105.143353-4</version>
+			<groupId>com</groupId>
+			<artifactId>kafkaservice</artifactId>
+			<version>0.0.6-20230105.150142-5</version>
 		</dependency>
 	</dependencies>
 

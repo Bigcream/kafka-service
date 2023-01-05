@@ -11,6 +11,5 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @ComponentScan({"com.example.appchat.service", "com.example.appchat.actor", "com.example.appchat.config"})
 @EnableJpaRepositories(basePackages = {"com.example.appchat.repository"})
 @EntityScan("com.example.appchat.model.entity")
-@ConfigurationPropertiesScan("com.example.appchat.config")
 public class AppChatConfig {
 }

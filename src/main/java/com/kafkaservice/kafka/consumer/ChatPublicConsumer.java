@@ -14,9 +14,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class PublicChatConsumer {
+public class ChatPublicConsumer {
     private final UserChatService userChatService;
-    private static final Logger LOGGER = LoggerFactory.getLogger(PublicChatConsumer.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ChatPublicConsumer.class);
 
     @KafkaListener(topics = KafkaTopic.PUBLIC_CHAT_TOPIC, groupId = KafkaGroup.PUBLIC_CHAT_GROUP)
     public void publicChatConsumer1(ConsumerRecord<String, String> record, MessageKafka messageKafka) throws Exception {
