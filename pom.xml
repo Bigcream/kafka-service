@@ -60,11 +60,6 @@
 			<artifactId>spring-kafka-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>com</groupId>
-			<artifactId>kafkaservice</artifactId>
-			<version>0.0.6-20230105.150142-5</version>
-		</dependency>
 	</dependencies>
 
 	<build>

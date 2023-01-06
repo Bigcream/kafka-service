@@ -1,9 +1,11 @@
 package com.kafkaservice.kafka.consumer;
 
-import com.example.appchat.service.UserChatService;
+
+import com.kafkaservice.constant.AppChatApi;
 import com.kafkaservice.constant.KafkaGroup;
 import com.kafkaservice.constant.KafkaTopic;
 import com.kafkaservice.payload.MessageKafka;
+import com.kafkaservice.util.AppChatServiceUtil;
 import lombok.RequiredArgsConstructor;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.slf4j.Logger;
@@ -14,8 +16,8 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class ChatPrivateConsumer {
-    private final UserChatService userChatService;
     private static final Logger LOGGER = LoggerFactory.getLogger(ChatPublicConsumer.class);
+    private final AppChatServiceUtil appChatServiceUtil;
 
     @KafkaListener(topics = KafkaTopic.PRIVATE_CHAT_TOPIC, groupId = KafkaGroup.PRIVATE_CHAT_GROUP)
     public void privateChatConsumer1(ConsumerRecord<String, String> record, MessageKafka messageKafka) throws Exception {
@@ -40,6 +42,7 @@ public class ChatPrivateConsumer {
 //        messageKafka.setSenderName(user.getUsername());
 //        messageKafka.setReceiverName(user.getUsername());
 //        userChatService.sendPrivateChat(messageKafka);
+        appChatServiceUtil.sendMessage(messageKafka, AppChatApi.SEND_PRIVATE_CHAT);
         System.out.printf("offset = %d, key = %s, value = %s%n", record.offset(), record.key(), record.value());
     }
 }
