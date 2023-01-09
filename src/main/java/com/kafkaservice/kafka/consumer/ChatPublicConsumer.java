@@ -40,7 +40,7 @@ public class ChatPublicConsumer {
 //        UserEntity user = objectMapperUtil.convertObject(UserEntity.class, messageKafka.getData());
 //        messageKafka.setSenderName(user.getUsername());
         appChatServiceUtil.sendMessage(messageKafka, AppChatApi.SEND_PUBLIC_CHAT);
-        System.out.println("test" + messageKafka.getMessage());
+        System.out.println("test" + messageKafka.getContent());
     }
 }
 
